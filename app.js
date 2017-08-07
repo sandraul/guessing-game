@@ -12,14 +12,11 @@
   if (lowerCaseOne == "yes" || lowerCaseOne == "y") {
     alert("Aja! I see you know some Geography!");
     console.log("User answers to question one: " +questionOne);
+    questionOne = 1;
   } else {
     alert("Oops, thats not right.  It is the name of the State and also the City!");
     console.log("User answers to question one: " +questionOne);
-  }
-  if (questionOne == "yes"){
-    questionOne = 1;
-  }  else {
-    (questionOne = 0);
+    questionOne = 0;
   }
 
 
@@ -28,29 +25,24 @@
   if (lowerCaseTwo == "yes" || lowerCaseTwo == "y") {
     alert("Nop, Oaxaca's climate is mostly subtropical!");
     console.log("User answers to question two: " +questionTwo);
+    questionTwo = 1;
   } else {
     alert("Correct, it is located 6,562 ft above sea level with subtropical climate!")
     console.log("User answers to question two: " +questionTwo)
+    questionTwo = 0;
   }
-  if (questionTwo == "yes"){
-    questionTwo = 1;
-  }  else {
-    (questionTwo = 0);
-  }
+
 
   var questionThree = prompt("Have you been to Oaxaca?", "yes/no");
   var lowerCaseThree = questionThree.toLowerCase ();
   if (lowerCaseThree == "yes" || lowerCaseThree == "y") {
     alert("Great, I'm sure you loved the food!.");
     console.log("User answers to question three: " +questionThree)
+    questionThree = 1;
   } else {
     alert("Oh well, you definitly have to go visit someday!.")
     console.log("User answers to question three: " +questionThree)
-  }
-  if (questionThree == "yes"){
-    questionThree = 1;
-  } else {
-    (questionThree = 0);
+    questionThree = 0;
   }
 
   //Obtaining number of Correct/Wrong answers
