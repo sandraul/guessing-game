@@ -4,4 +4,4 @@
 
 Guessing game about Oaxaca
 
-Ive used Wikipedia for info about Oaxaca
+https://en.wikipedia.org/wiki/Oaxaca
