@@ -18,7 +18,7 @@
     alert("Oops, thats not right.  It is the name of the State and also the City!");
     console.log("User answers to question one: " +questionOne);
   } else {
-    alert("You missed the correct answer");
+    alert("I'm so Sorry, You missed the correct answer!");
 
   }
 
@@ -34,7 +34,7 @@
     alert("Correct, it is located 6,562 ft above sea level with subtropical climate!")
     console.log("User answers to question two: " +questionTwo)
   } else {
-    alert("You missed the correct answer");
+    alert("I'm so Sorry, You missed the correct answer!");
   }
 
 
@@ -43,16 +43,30 @@
   var questionThreeCount = 0
   if (lowerCaseThree == "yes" || lowerCaseThree == "y") {
     alert("Great, I'm sure you loved the food!.");
-    console.log("User answers to question three: " +questionThree)
+    console.log("User answers to question three: yes")
     questionThreeCount = 1;
   } else if (lowerCaseThree == "no" || lowerCaseThree == "n") {
     alert("Oh well, you definitly have to go visit someday!.")
-    console.log("User answers to question three: " +questionThree)
+    console.log("User answers to question three: no" )
   } else {
-    alert("You missed the correct answer");
+    alert("I'm so Sorry, You missed the correct answer!");
+  }
+
+  var questionFour = prompt("Haw many species of birds are in Oaxaca?");
+  var questionFourCount = 0
+  if (questionFour == 738){
+    alert("Yay, you got it!");
+    console.log("User got right answer to question four")
+    questionFourCount = 1;
+  } else if (questionFour < 738){
+    alert("Way too low!");
+  } else if (questionFour > 738){
+    alert("Oh, too high!");
+  } else {
+    alert("Sorry you missed it, Oaxaca has 738 bird species!")
   }
 
   //Obtaining number of Correct/Wrong answers
   console.log("Total of Correct Answered Questions")
-  var correctAnswers = questionOneCount +questionTwoCount +questionThreeCount
+  var correctAnswers = questionOneCount +questionTwoCount +questionThreeCount +questionFourCount
   alert("Your correct answers are: " +correctAnswers);
