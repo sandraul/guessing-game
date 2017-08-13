@@ -52,7 +52,7 @@ function guessQuestionTwo() {
     msg += "<br><span class='wrong'>Nop, Oaxaca's climate is mostly subtropical!";
     console.log("incorrect answer" +questionTwo);
   } else if (lowerCaseTwo == "no" || lowerCaseTwo == "n") {
-    msg += "<br><span class='correct'>Correct, it is located 6,562 ft above sea level with subtropical climate!";
+    msg += "<br><span class='correct'>Correct, it is located 6,562ft above sea level with subtropical climate!";
     console.log("correct answer" +questionTwo);
     questionTwoCount = 1;
   } else {

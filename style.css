@@ -1,13 +1,16 @@
 body {
-  background: #ee9c88;
+  background-color: #ee9c88;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
   text-align: left;
+  color: white;
+  background-image: url(pictures/oaxacaNight.png);
+  background-size: cover;
+  height: 100%;
 }
 
-#main {
-  position: relative;
-}
-
-h1, h4 {
+h1 {
   text-align: center;
   font-family: Helvetica, Arial, sans-serif;
   font: 24pt;
@@ -16,16 +19,12 @@ h1, h4 {
   text-transform: uppercase;
 }
 
-p {
+/*p {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14pt;
   line-height: 1.4em;
-}
+}*/
 
-#main img {
-  max-width: 100%;
-}
-
-ul {
+/*ul {
   list-style-type: none;
-}
+}*/
