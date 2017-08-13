@@ -1,0 +1,31 @@
+body {
+  background: #ee9c88;
+  text-align: left;
+}
+
+#main {
+  position: relative;
+}
+
+h1, h4 {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font: 24pt;
+  color: white;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  line-height: 1.4em;
+}
+
+#main img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}

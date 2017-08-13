@@ -2,20 +2,29 @@
 <html>
   <head>
     <title>Guessing Game</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="app.js"></script>
+    <style>
+      .correct {color: black;}
+      .wrong {color: #6d0011;}
+    </style>
   </head>
   <body>
-    <div id="questions"></div>
-    <input type="button" value="Click Here" onclick="startGuessingGame()">
-    <h1>Oaxaca's Wonders</h1>
+    <h1>A guessing game about Oaxaca</h1>
+    <div id="main">
+      <input type="button" value="Start the Game Here!" onclick="startGuessingGame()">
+      <img src="pictures/oaxacaNight.png" />
+      <div id="questions"></div>
+    </div>
+
     <h3>A little bit of History</h3>
-        <p>Oaxaca: Pronounced 'wə-HAH-kə', comes from the Nahuatl Huāxyacac which means "Land Of Huajes". Huaje is a very common tree in the area.</p><br>
+    <p>Oaxaca: Pronounced 'wə-HAH-kə', comes from the Nahuatl Huāxyacac which means "Land Of Huajes". Huaje is a very common tree in the area.</p><br>
         Oaxaca is located in Southwestern Mexico and it has a significant coastline on the Pacific Ocean.<br>
         The state is best known for its indigenous peoples and cultures. The most numerous and best known are the Zapotecs and the Mixtecs, but there are sixteen that are officially recognized. These two have very important archeological sites such as Monte Albán, and Mitla, with a rich very native culture and crafts. <br>
         Another important tourist area is the coast, which has the major resort of Huatulco and sandy beaches of Puerto Escondido, Puerto Angel, Zipolite and Mazunte. <br>
         Oaxaca is also one of the most biologically diverse states in Mexico for numbers of reptiles, amphibians, mammals and plants.
-<br>
-<br>
+        <br>
+        <br>
     <h3>Regions and Major districts</h3>
     <table align="left" border="1" cellspacing="10" cellpadding="5" with="50%">
       <thead>
@@ -73,7 +82,7 @@
     <p>Although it is the fifth-largest state in Mexico, it has the most biodiversity. <br>
       There are: </p>
         <ul>
-           <li>more than 8,400 registered plant species.</li>
+           <li>More than 8,400 registered plant species.</li>
            <li>738 bird species.</li>
            <li>1,431 terrestrial vertebrate species.</li>
        </ul>
@@ -85,6 +94,5 @@
            <li>Mining and industry: Currently coal, salt, chalk, petroleum, marble, lime, graphite, titanium, silver, gold and lead are still extracted.</li>
            <li>Commerce: Tourism is important to the state as it is the only sector that is growing and brings substantial income from outside the state, although most tourism is concentrated in the capital and along the coast.</li>
         </ul>
-     <p></p>
   </body>
 </html>

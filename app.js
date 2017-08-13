@@ -7,6 +7,12 @@
   var message = user + ", Let's see what you know about Oaxaca." + "\nToday is: " + today.toDateString();
   console.log("Message given to the user: " +message);
 
+  var questionOneCount = 0
+  var questionTwoCount = 0
+  var questionThreeCount = 0
+  var questionFourCount = 0
+  var questionFiveCount = 1
+
 var msg="Start the Guessing Game";
 function updatePage() {
   document.getElementById('questions').innerHTML = msg;
@@ -18,19 +24,19 @@ function startGuessingGame() {
   guessQuestionThree();
   guessQuestionFour();
   guessQuestionFive();
+  sumCorrectAnswers();
 }
 
 //Question One: Is Oaxaca in South America?
 function guessQuestionOne() {
   var questionOne = prompt("Is Oaxaca in South America?", "yes/no");
   var lowerCaseOne = questionOne.toLowerCase ();
-  var questionOneCount = 0
   if (lowerCaseOne == "yes" || lowerCaseOne == "y") {
-    msg = "<span class='correct'>Sorry, You started with the wrong foot. It is actually part of North America.";
-    console.log("correct answer" +questionOne);
-  } else if (lowerCaseOne == "no" || lowerCaseOne == "n") {
-    msg = "<span class='wrong'>That's impresive! You got it right!";
+    msg = "<span class='wrong'>Sorry, You started with the wrong foot. It is actually part of North America.";
     console.log("incorrect answer" +questionOne);
+  } else if (lowerCaseOne == "no" || lowerCaseOne == "n") {
+    msg = "<span class='correct'>That's impresive! You got it right!";
+    console.log("correct answer" +questionOne);
     questionOneCount = 1;
   } else {
     msg = "<span class='failed'>Oops, You missed the correct answer!";
@@ -42,7 +48,6 @@ function guessQuestionOne() {
 function guessQuestionTwo() {
   var questionTwo = prompt("Does it snow in Oaxaca?", "yes/no");
   var lowerCaseTwo = questionTwo.toLowerCase ();
-  var questionTwoCount = 0
   if (lowerCaseTwo == "yes" || lowerCaseTwo == "y") {
     msg += "<br><span class='wrong'>Nop, Oaxaca's climate is mostly subtropical!";
     console.log("incorrect answer" +questionTwo);
@@ -60,7 +65,6 @@ function guessQuestionTwo() {
 function guessQuestionThree() {
   var questionThree = prompt("Are Grasshoppers a common protein source in Oaxaca?", "yes/no");
   var lowerCaseThree = questionThree.toLowerCase ();
-  var questionThreeCount = 0
   if (lowerCaseThree == "yes" || lowerCaseThree == "y") {
     msg += "<br><span class='correct'>Don't worry, they are cooked with lime and chili and are super crunchy!";
     console.log("correct answer" +questionThree)
@@ -77,20 +81,21 @@ function guessQuestionThree() {
 // Question Four: How many species of birds are in Oaxaca?
 function guessQuestionFour() {
 do {
-  var questionFour = prompt("How many species of birds are in Oaxaca?\nHINT: It is a three digit number");
-  var questionFourCount = 0
-  if (questionFour == 738){
-    alert("Yay, you got it!");
-    questionFourCount = 1;
-  } else if (questionFour < 738){
-    alert("Way too low!\nHINT: More than 730 species.");
+  var questionFour;
+  if (questionFour < 738){
+    questionFour = prompt("Way too low!\nHINT: More than 737 species. Try again!");
   } else if (questionFour > 738){
-    alert("Too high!\nHINT: Less than 740");
+    questionFour = prompt("Too high!\nHINT: Less than 739. Try again!");
   } else {
-    alert("Sorry you missed it, Oaxaca has 738 bird species!");
+    questionFour = prompt("How many species of birds are in Oaxaca?\nHINT: It is a three digit number");
+    // alert("Sorry you missed it, Oaxaca has 738 bird species!");
   }
 } while (questionFour != 738);
-
+  if (questionFour == 738){
+    alert("Yay, you got it! Oaxaca has 738 species of birds.");
+    msg += "<br><span class='correct'>Yay, you got it! Oaxaca has 738 species of birds.";
+    questionFourCount = 1;
+}
   updatePage();
 }
 
@@ -98,7 +103,6 @@ do {
 function guessQuestionFive() {
   var questionFive = prompt("I'm thinking of a number between 25 and 30, Try to guess it!", " ");
   var questionFiveAnswer = 27
-  var questionFiveCount = 1
 while (questionFive != 27) {
   if (questionFive < 27) {
     questionFive = prompt("Try a bigger number!");
@@ -110,7 +114,7 @@ while (questionFive != 27) {
   }
 }
     if (questionFive == 27) {
-    msg += "<br><span class='correct'>You did it!";
+    msg += "<br><span class='correct'>You're good with guessing!'";
     console.log("correct answer" +questionFiveAnswer);
 
   }
@@ -118,10 +122,9 @@ while (questionFive != 27) {
 }
 
 
-//Obtaining number of Correct/Wrong answers
-// function sumCorrectAnswers() {
-//
-// }
-  console.log("Total of Correct Answered Questions");
+//Obtaining number of CorrectWrong answers
+function sumCorrectAnswers() {
   var correctAnswers = questionOneCount +questionTwoCount +questionThreeCount +questionFourCount +questionFiveCount
+  console.log("Total of Correct Answered Questions");
   alert("Your correct answers are: " +correctAnswers);
+}
