@@ -3,8 +3,8 @@ body {
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed;
-  text-align: left;
-  color: white;
+  /*text-align: left;*/
+  /*color: white;*/
   background-image: url(pictures/oaxacaNight.png);
   background-size: cover;
   height: 100%;
@@ -33,6 +33,16 @@ body {
 .button:hover {
     background-color: #ee9c88;
     color: white;
+}
+
+.correct {
+  font-family: Helvetica, Arial, sans-serif;
+  font: 24pt;
+}
+
+.wrong {
+  font-family: Helvetica, Arial, sans-serif;
+  font: 24pt;
 }
 
 h1 {

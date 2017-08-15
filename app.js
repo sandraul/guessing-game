@@ -121,7 +121,6 @@ while (questionFive != 27) {
   updatePage();
 }
 
-
 //Obtaining number of CorrectWrong answers
 function sumCorrectAnswers() {
   var correctAnswers = questionOneCount +questionTwoCount +questionThreeCount +questionFourCount +questionFiveCount
