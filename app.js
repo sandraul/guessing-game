@@ -4,8 +4,8 @@
   console.log("The user's name is: "+user);
   var today = new Date();
   console.log("Today is: "+today);
-  var message = user + ", Let's see what you know about Oaxaca." + "\nToday is: " + today.toDateString();
-  console.log("Message given to the user: " +message);
+  var msg = user + ", Let's see what you know about Oaxaca." + "\nToday is: " + today.toDateString();
+  console.log("Message given to the user: " +msg);
 
   var questionOneCount = 0
   var questionTwoCount = 0
